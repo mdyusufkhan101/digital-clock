@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background:
+        #fff;
+    font-family: 'Sono', sans-serif;
+    transition: background 0.5s ease;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.navbar-description {
+    font-size: 16px;
+}
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#clock {
+    position: relative;
+    width: 480px;
+    padding: 45px;
+    margin: 0 auto 80px;
+    transition: all 0.5s ease;
+}
+
+#clock::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    margin-left: -200px;
+    height: 20px;
+    width: 400px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+#clock.light {
+    color: black;
+}
+
+#clock.dark {
+    color: white;
+}
+
+.display {
+    position: relative;
+    height: 54px;
+    padding: 40px 20px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.date-format-btn {
+    margin-right: 10px;
+    background-color: #008080;
+    color: orange;
+    border: 1px solid #008080;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.date-format-btn:hover {
+    opacity: 0.75;
+}
+
+.date {
+    margin-top: 80px;
+    font-size: 24px;
+    color: #808080;
+}
+
+#clock.light .display {
+    border: 3px solid orange;
+}
+
+#clock.dark .display {
+    border: 3px solid purple;
+}
+
+.ampm {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 24px;
+}
+
+.digits {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 85%;
+    font-size: 60px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dots {
+    animation: blinkingDots 1s ease infinite;
+}
+
+@keyframes blinkingDots {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color:
+        #008080;
+    color:
+        orange;
+    text-decoration: none;
+    border: 1px solid #008080;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #808080;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+    opacity: 0.75;
+}
+
+#country-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.country-block {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.country-block h3 {
+    margin: 0;
+}
+
+.country-block p {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-title">Time</div>
+        <div class="navbar-description">Unix Time Converter</div>
+    </nav>
+    <div class="container">
+        <div class="light" id="clock">
+            <div class="display">
+                <div class="ampm" id="ampm"></div>
+                <div class="digits">
+                    <div id="hours">00</div>
+                    <div class="dots">:</div>
+                    <div id="minutes">00</div>
+                    <div class="dots">:</div>
+                    <div id="seconds">00</div>
+                </div>
+                <div class="date" id="date"></div>
+            </div>
+        </div>
+        <div class="btn-container"><a class="btn">Switch Theme</a></div>
+    </div>
+    <div id="country-container">
+        <div class="country-block">
+            <h3>New Zealand</h3>
+            <p id="new-zealand-time"></p>
+        </div>
+        <div class="country-block">
+            <h3>Italy</h3>
+            <p id="italy-time"></p>
+        </div>
+        <div class="country-block">
+            <h3>China</h3>
+            <p id="china-time"></p>
+        </div>
+        <div class="country-block">
+            <h3>India</h3>
+            <p id="india-time"></p>
+        </div>
+    </div>
+
+    <div class="date-container">
+        <!-- New code for the date format buttons -->
+        <button class="date-format-btn" id="mmddyyyy">MM/DD/YYYY</button>
+        <button class="date-format-btn" id="ddmmyyyy">DD/MM/YYYY</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="time.js"></script>
+</body>
+
+</html>
